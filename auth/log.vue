@@ -37,13 +37,10 @@ export default {
 
         const data = await response.json();
         
-        // Assuming your server sends back a token upon successful login
         const token = data.token;
 
-        // Save token to Vuex store
         this.$store.dispatch('login', { token });
 
-        // Redirect to home or dashboard page
         this.$router.push('/');
       } catch (error) {
         console.error('Login failed:', error.message);

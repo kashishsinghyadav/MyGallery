@@ -14,7 +14,7 @@ export default new Vuex.Store({
     clearToken(state) {
       state.token = null;
     }
-  },
+  }, 
   actions: {
     login({ commit }, { token }) {
       commit('setToken', token);
